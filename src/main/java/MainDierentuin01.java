@@ -2,8 +2,12 @@ public class MainDierentuin01 {
     public static void main(String[] args) {
         String naamDierentuin = "Valori's Zoo";
         String[] mijnDieren;
+        String[] mijnDiersoorten;
         mijnDieren = haalOpMijnDieren();
         dierentuinOverzichtDieren(naamDierentuin, mijnDieren);
+        mijnDiersoorten = haalOpMijnDiersoorten();
+        dierentuinOverzichtDieren(naamDierentuin, mijnDieren, mijnDiersoorten );
+
     }
 
     public static String[] haalOpMijnDieren() {
@@ -21,10 +25,23 @@ public class MainDierentuin01 {
         return dieren;
     }
 
+    public static String[] haalOpMijnDiersoorten() {
+        String[] diersoorten = {"zoogdier", "zoogdier", "zoogdier", "zoogdier", "vogel",
+                                "vis", "spin","amfibie", "insect", "zoogdier"};
+        return diersoorten;
+    }
+
     public static void dierentuinOverzichtDieren(String naam, String[] dieren) {
         System.out.println("Naam dierentuin: " + naam);
         for (String dier : dieren) {
             System.out.println(dier);
+        }
+    }
+
+    public static void dierentuinOverzichtDieren(String naam, String[] dieren, String[] soorten) {
+        System.out.println("Naam dierentuin: " + naam);
+        for (int x = 0 ; x < dieren.length ; x++) {
+            System.out.println(dieren[x] + " " + soorten[x]);
         }
     }
 }
