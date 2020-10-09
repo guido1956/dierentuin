@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class MainDierentuin01 {
     public static void main(String[] args) {
         String naamDierentuin = "Valori's Zoo";
